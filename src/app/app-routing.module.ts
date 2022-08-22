@@ -19,10 +19,15 @@ import { ProductComponent } from './dashboard/dashboard-components/product/produ
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FullComponent } from './layouts/full/full.component';
 
+//guards
+
+import {LoginGuard} from './guards/login.guard';
+
 const routes: Routes = [
   {
-    path:"",
+    path:"home",
     component:FullComponent,
+    canActivate: [ LoginGuard],
     children: [
       {path:"", redirectTo:"/home", pathMatch:"full"},
       {path:"home", component:DashboardComponent},
@@ -43,10 +48,14 @@ const routes: Routes = [
       {path:"tooltip", component:TooltipsComponent},
       {path:"button", component:ButtonsComponent},
     ]
+    
   },
-
-  {path:"", redirectTo:"/home", pathMatch:"full"},
-  {path:"**", redirectTo:"/home", pathMatch:"full"},
+  {
+    path:"login",
+    loadChildren: () => import('./components/login/login.module').then(m => m.LoginModule),
+  },
+  {path:"", redirectTo:"/login", pathMatch:"full"},
+  {path:"**", redirectTo:"/login", pathMatch:"full"},
 ];
 
 @NgModule({
