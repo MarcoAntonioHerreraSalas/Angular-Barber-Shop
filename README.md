@@ -2,33 +2,43 @@
 
 <!-- Heading of Template -->
 <h1>
-  <a href="https://demos.wrappixel.com/free-admin-templates/angular/flexy-angular-free/angular/home">Flexy admin angular lite</a>
+  Angular Barber Shop 
 </h1>
 
 <!-- Main image of Template -->
-<a target="_blank" href="https://demos.wrappixel.com/free-admin-templates/angular/flexy-angular-free/angular/home">
-  <img src="https://www.wrappixel.com/wp-content/uploads/edd/2022/02/flexy-free-angular.jpg" />
-</a>
+  <img src="./barber.PNG" />
 
-Flexy admin angular lite is a Google Material Design base template that has a clean design visuals. The design is based on Google's Material principles and the template has some handy user interface elements and page templates you need to develop your own dashboard in a easy and hassle-free manner.
+
+Sistema Barber Shop desarrollado en Angular 13.1.3 con el fin de controlar un negocio de barberia desde 
+control administrativo, contable, servicios, productos y de citas. 
+
+El sistema se encuentra en desarrollo las integraciones se harán poco a poco además que el software es de código libre . 
+
+El backend es desarrollado en node Js y con base de datos en Mongo DB el backend se subira a otro repositorio en la siguiente liga "backendBarberShopNodeJs"
+
+Asi mismo el sistema trabaja con una version de Flexy Admin para facilitar el trabajo de admin panel se utilizo la version gratuita de libre uso.
+
 
 <!-- <h4><a href="https://wrappixel.com/demos/angular-admin-templates/material-angular-lite/angular/dashboard">Free Version Demo Link</a></h4> -->
 
-## What do I get bundled with Free Version?
+## Que contiene la versión v1 Barber Shop System?
 
-The free version Flexy admin angular lite provides you with a library consisting of:
 
 <ul>
-<li>SaSS Base CSS</li>
-<li>7+ Pages Template</li>
-<li>Easy To Customize elements</li>
-<li>10+ UI Components</li>
-<li>Basic Table Examples</li>
-<li>Fully Responsive Pages</li>
-<li>Multiple Widgets – Icons, Tables, and Charts</li>
-<li>Basic forms</li>
-<li>User Interface Elements – Buttons, Editor, Tabs, Accordions, Modals, Progress Bars, Tooltips, cards, notification, Timeline, Snack Bar, Grid List, Progress Spinner, Ratings, Data Picker, and many more.</li>
+<li>Login y Token de seguridad</li>
+<li>Flexy Admin </li>
+<li>Angular Guard para Inicio de Sesión</li>
 </ul>
+
+
+## Para descargar el sistema ejecutar en CMD 
+
+`Git clone https://github.com/MarcoAntonioHerreraSalas/Angular-Barber-Shop.git `
+
+Seguido de la descarga del repositorio ejecutar la siguiente línea para las dependencias ( Recuerda tener
+la versión de Angular 13.1.3 ya instalada
+
+`npm install`
 
 ## Development server
 
@@ -59,28 +69,15 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 <table>
 <thead>
 <tr>
-<th>Bootstrap</th>
-<th>React</th>
-<th>Next.js</th>
+<th>v1</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>
-  <a href="https://www.wrappixel.com/templates/flexy-bootstrap-admin-template/" rel="nofollow" width="150px">
-    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2021/05/flexy.jpg" alt="MaterialPro Template  Bootstrap" style="max-width:150px;">
-  </a>
+    <img src="./barber.PNG" alt="Barber" style="max-width:150px;">
 </td>
-<td>
-  <a href="https://www.wrappixel.com/templates/flexy-react-material-dashboard-admin/" rel="nofollow" width="150px">
-    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2021/07/flexy-react-admin.jpg" alt="MaterialPro Template  React" style="max-width:150px;">
-  </a>
-</td>
-  <td>
-  <a href="https://www.wrappixel.com/templates/flexy-next-js-free-admin-template/" rel="nofollow" width="150px">
-    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2022/01/flexy-nextjs-free.jpg" alt="MaterialPro Template  Angular" style="max-width:150px;">
-  </a>
-</td>
+
 </tr>
 </tbody>
 </table>
@@ -116,29 +113,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 <!-- MaterialPro Angular 12 Lite Template is released under MIT license. MaterialPro Angular Lite is Free angular 12 template designed and developed by WrapPixel. Please feel free to download it and use it for your personal as well as commercial projects. Also do not forgot to share it with your friends and colleagues. -->
 
-## Pro version is cooming soon.
+## Versión completa pronto disponible
 
-## The WrapPixel Advantage: Unlimited updates and dedicated support
 
-<ul>
-<li>Once you purchase a WrapPixel's template you can rest easy knowing that you'll be entitled to a free download of all our future updates for lifetime.</li>
-</li>Our dedicated support team is at your service for any queries or clarifications. Simply send us your query at https://www.wrappixel.com/support/ for quick resolution of your concerns.</li>
-</ul>
-
-<!-- Useful Links of Template -->
-<h2>Useful Links</h2>
-<ul>
-<li><a href="https://www.wrappixel.com/templates/category/admin-template/">Dashboard Templates</a> from WrapPixel</li>
-<li><a href="https://www.wrappixel.com/">Bootstrap 5 Themes</a> from WrapPixel</li>
-<li><a href="https://www.wrappixel.com/templates/category/bootstrap-admin-templates/">Bootstrap Dashboard</a> from WrapPixel</li>
-<li><a href="https://www.wrappixel.com/templates/category/react-templates/">React Themes</a> from WrapPixel</li>
-<li><a href="https://www.wrappixel.com/templates/category/vuejs-templates/">Vuejs Templates</a> from WrapPixel</li>
-<li><a href="https://www.wrappixel.com/templates/category/angular-templates/">Angular Themes</a> from WrapPixel</li>
-<li><a href="https://www.wrappixel.com/templates/category/free-templates/">Freebies</a> from WrapPixel</li>
-</ul>
 
 <!-- Social Media of Wrappixel -->
 <h2>Social Media</h2>
-<p>Facebook: <a href="https://www.facebook.com/wrappixel">https://www.facebook.com/wrappixel</a></p>
-<p>Twitter: <a href="https://twitter.com/wrappixel">https://twitter.com/wrappixel</a></p>
-<p>Medium: <a href="https://medium.com/wrappixel">https://medium.com/wrappixel</a></p>
+<p>Linkedin: <a href="https://mx.linkedin.com/in/marco-antonio-herrera-salas-ba5bb916b">https://mx.linkedin.com/in/marco-antonio-herrera-salas-ba5bb916b</a></p>
