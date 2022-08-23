@@ -3,7 +3,7 @@
 
 $flexy-primary: (
   100: #fcf1ed,
-  500: #03c9d7,
+  500: #1C92DE,
   700: #425a61,
   contrast: (
     100: #393939,
@@ -14,7 +14,7 @@ $flexy-primary: (
 
 $flexy-accent: (
   100: #fcf1ed,
-  500: #fb9678,
+  500: #E5AF0C  ,
   700: #425a61,
   contrast: (
     100: #393939,
@@ -25,7 +25,7 @@ $flexy-accent: (
 
 $flexy-warn: (
   100: #fcf1ed,
-  500: #e46a76,
+  500: #DE1C1C,
   700: #5d363a,
   contrast: (
     100: #393939,
@@ -94,12 +94,12 @@ sans-serif;
 $body-color: #fafbfb;
 
 // Main Colors
-$primary: #fb9678;
+$primary: #007bff;
 $secondary: #777e89;
-$success: #00c292;
-$info: #03c9d7;
-$warning: #fec90f;
-$danger: #e46a76;
+$success: #28a745;
+$info: #1C92DE;
+$warning: #ffc107;
+$danger: #DE1C1C;
 $indigo: #551a8b;
 $light: #4952581f;
 $dark: #000000de;

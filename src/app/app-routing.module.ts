@@ -24,13 +24,22 @@ import { FullComponent } from './layouts/full/full.component';
 import {LoginGuard} from './guards/login.guard';
 
 const routes: Routes = [
+ 
   {
-    path:"home",
+    path:"login",
+    loadChildren: () => import('./components/login/login.module').then(m => m.LoginModule),
+  },
+  {
+    path:"",
     component:FullComponent,
     canActivate: [ LoginGuard],
     children: [
       {path:"", redirectTo:"/home", pathMatch:"full"},
       {path:"home", component:DashboardComponent},
+      {
+        path:"services",
+        loadChildren: () => import('./components/service/service.module').then((m) => m.ServiceModule)
+      },
       {path:"alerts", component:AlertsComponent},
       {path:"forms", component:FormsComponent},
       {path:"table", component:ProductComponent},
@@ -50,16 +59,16 @@ const routes: Routes = [
     ]
     
   },
-  {
-    path:"login",
-    loadChildren: () => import('./components/login/login.module').then(m => m.LoginModule),
-  },
   {path:"", redirectTo:"/login", pathMatch:"full"},
   {path:"**", redirectTo:"/login", pathMatch:"full"},
+  
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+  constructor(){
+  }
+}

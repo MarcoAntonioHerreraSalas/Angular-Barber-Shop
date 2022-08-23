@@ -35,7 +35,7 @@ export class SalesComponent implements OnInit {
       {
         name: 'Pixel Admin',
         data: [280, 250, 325, 215, 250, 310, 280, 250, 325, 215, 250, 310],
-        color: "#03c9d7",
+        color: "#1C92DE",
       },
     ];
     

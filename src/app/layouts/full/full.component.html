@@ -7,41 +7,27 @@
     <div class="p-16">
       <div class="mb-16">
         <a href="javascript:void(0)" class="d-flex align-items-center">
-          <img src="assets/images/favicon.png" alt=""> <span class="ms-16 fw-medium fs-26">Flexy</span>
+          <img src="assets/images/favicon.png" width="30px" height="30px" alt="" > <span class="ms-16 fw-medium fs-26">Barber Shop</span>
         </a>
 
       </div>
 
-      <div class="pt-8">
-        <ul>
-          <li class="list-group mb-8" *ngFor="let sidenav of sidebarMenu">
-            <a matRipple [matRippleColor]="'#f7f8f443'" routerLink="{{ sidenav.link }}"
-              class="sidebar-menu fs-16 w-100 d-flex align-items-center" [routerLinkActive]="routerActive">
-              <i-feather name="{{ sidenav.icon }}" class="feather-base me-16"></i-feather> <span
-                class="ps-4">{{ sidenav.menu }}</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <div class="pt-8 " >
+        <div>
 
-      <div class="m-8 pt-4">
-        <div class="buy-flexy ps-24 pe-24 mt-48 mb-48">
-          <div class="text-center">
-            <img src="assets/images/sidebar-buynow-bg.svg" class="img-fluid" alt="">
-            <div class="pt-24 pb-24 mt-8">
-              <p class="fw-bold fs-18 mb-16 pb-8">Get This for Free</p>
-              <ul>
-                <li class="mb-8">
-                  <a href="javascript:void(0)" mat-flat-button class="btn-info fw-light w-100 fs-14">Download Free</a>
-                </li>
-                <li>
-                  <a href="javascript:void(0)" mat-flat-button class="btn-primary w-100 fw-light fs-14">Check Pro</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <ul>
+            <li class="list-group mb-8" *ngFor="let sidenav of sidebarMenu">
+              <a matRipple [matRippleColor]="'#f7f8f443'" routerLink="{{ sidenav.link }}"
+                class="sidebar-menu fs-16 w-100 d-flex align-items-center" [routerLinkActive]="routerActive">
+                <i-feather name="{{ sidenav.icon }}" class="feather-base me-16"></i-feather> <span
+                  class="ps-4">{{ sidenav.menu }}</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
+
+      
     </div>
 
   </mat-sidenav>
@@ -61,7 +47,7 @@
         <button mat-button class="fs-16 pt-4 pb-4 ps-8 pe-8 text-light-muted" [matMenuTriggerFor]="menu">
           <img src="assets/images/user2.webp" class="rounded-circle" alt="">
           <span class="fw-light ms-8 text-secondary">Hi,</span>
-          <span class="fw-bold ms-8">Julia</span>
+          <span class="fw-bold ms-8">{{user.name}}</span>
           <i-feather name="chevron-down" class="feather-base mt-n2"></i-feather>
         </button>
         <mat-menu #menu="matMenu" class="profile-dropdown">
@@ -90,8 +76,8 @@
     </div>
 
     <p class="text-center pb-24 fs-16">© 2022 All rights reserved by <a
-        href="https://www.wrappixel.com/templates/category/free-angular-templates/" target="_blank"
-        class="text-indigo">Wrappixel.com</a></p>
+        href="https://mx.linkedin.com/in/marco-antonio-herrera-salas-ba5bb916b" target="_blank"
+        class="text-indigo">Marco Antonio Salas</a></p>
 
   </mat-sidenav-content>
 

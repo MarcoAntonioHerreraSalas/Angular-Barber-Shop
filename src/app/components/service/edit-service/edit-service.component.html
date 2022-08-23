@@ -1,0 +1,32 @@
+<h4 class="mb-32">Editar Servicio</h4>
+
+    <div  *ngIf="errorEditService != '' "
+      class="alert alert-danger alert-text-danger d-flex fs-14 align-items-center rounded mb-16"
+      role="alert">
+      <i-feather name="alert-circle" class="text-danger feather-base me-12"></i-feather>
+      {{ errorEditService }}
+    </div>
+
+    <form [formGroup]="editServiceForm" (submit)="editService()">
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text"  placeholder="Nombre del Servicio" formControlName="nombre" name="nombre">
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Costo</mat-label>
+        <input matInput type="number" placeholder="Costo" formControlName="costo" name="costo">
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Precio</mat-label>
+        <input matInput type="number" placeholder="Precio del Servicio" formControlName="precio" name="precio">
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Detalle</mat-label>
+        <textarea matInput rows="6" placeholder="Detalle del Servicio" formControlName="detalle" name="detalle"></textarea>
+      </mat-form-field>
+
+      <button mat-button class="btn btn-info fw-normal"  type="submit">Submit</button>
+    </form>

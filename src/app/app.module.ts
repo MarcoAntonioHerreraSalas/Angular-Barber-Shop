@@ -2,14 +2,16 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FeatherModule } from 'angular-feather';
 import { allIcons } from 'angular-feather/icons';
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { LocalStorageService } from './services/local-storage.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FullComponent } from './layouts/full/full.component';
 import { DemoFlexyModule } from './demo-flexy-module'
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HTTP_INTERCEPTORS  } from '@angular/common/http';
+import { MatCardModule } from '@angular/material/card';
+
 
 // Modules
 import { DashboardModule } from './dashboard/dashboard.module';
@@ -18,6 +20,9 @@ import { LoginService } from './components/login/login.service';
 
 // Guards
 import { LoginGuard } from './guards/login.guard';
+
+// Interceptors
+import {LoginInterceptorService} from './interceptors/login-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -32,11 +37,21 @@ import { LoginGuard } from './guards/login.guard';
     DemoFlexyModule,
     DashboardModule,
     ComponentsModule,
-    FormsModule,
     HttpClientModule,
-    
+    MatCardModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  providers: [LocalStorageService,LoginGuard,LoginService],
+  providers: [
+    LocalStorageService,
+    LoginGuard,
+    LoginService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoginInterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

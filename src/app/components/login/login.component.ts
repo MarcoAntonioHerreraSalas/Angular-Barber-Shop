@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoginService } from './login.service';
-import { LocalStorageService } from 'src/app/services/local-storage.service';
+import { LocalStorageService } from '../../services/local-storage.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -48,7 +48,13 @@ export class LoginComponent implements OnInit {
         if(x.access_token){
           this.localStorageService.set('token',x.access_token);
           this.loginService.setTokenService(x.access_token);
-          this.router.navigateByUrl('/home');
+          const user = this.loginService.getUserByEmail(email).subscribe((z: any) => {
+
+            this.loginService.setUser(z.user);
+            this.localStorageService.set("user",JSON.stringify(z.user));
+            this.router.navigateByUrl('/home');
+
+          });
         
         }
       },(e) => {

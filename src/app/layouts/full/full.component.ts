@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import {LoginService} from '../../components/login/login.service';
+import { User } from 'src/app/interfaces/login.interface';
 
 interface sidebarMenu {
   link: string;
@@ -17,6 +19,7 @@ interface sidebarMenu {
 export class FullComponent {
 
   search: boolean = false;
+  user : User = {id: "",name: "", email: "",avatar: "",roles: [],permissions: [] };
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -24,7 +27,11 @@ export class FullComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) { }
+  constructor(private breakpointObserver: BreakpointObserver, private loginService: LoginService) { 
+    const u =  this.loginService.getUser();
+    this.user = u;
+
+  }
 
   routerActive: string = "activelink";
 
@@ -33,6 +40,11 @@ export class FullComponent {
       link: "/home",
       icon: "home",
       menu: "Dashboard",
+    },
+    {
+      link: "/services",
+      icon: "briefcase",
+      menu: "Servicios",
     },
     {
       link: "/button",
