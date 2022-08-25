@@ -1,0 +1,55 @@
+<mat-card class="w-100">
+    
+    <mat-card-content>
+        <h4 class="mb-56">Horarios de Trabajo</h4>
+    
+        <button mat-button color="primary" (click)="saveSchedule()" >Actualizar Horario</button> <br>
+        <div class="table-responsive"> 
+
+            <form  >
+                <ng-container *ngFor="let a of weekDays">
+                    <h4>{{a | titlecase}}</h4>
+    
+                    <mat-grid-list cols="5" rowHeight="50" [formGroup]="getMyGroup(a)">
+                        <mat-grid-tile>
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label>Inicio Hornada</mat-label>
+                                <input matInput type="time" min="09:00" max="18:00"
+                                    formControlName="inicioHorario" name="inicioHorario"  >
+                            </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label>Fin Hornada</mat-label>
+                                <input matInput type="time" min="09:00" max="18:00" formControlName="finHorario" name="finHorario"  >
+                            </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label>Horas de Descanso</mat-label>
+                                <input matInput placeholder="1" value="1" type="number" formControlName="horasDescanso" name="horasDescanso">
+                            </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label>Comienzo Descanso</mat-label>
+                                <input matInput type="time" min="09:00" max="18:00" formControlName="comienzoDeDescanso" name="comienzoDeDescanso"  >
+                            </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label> Citas Disponibles Por Horario</mat-label>
+                                <input matInput placeholder="1" value="1" type="number" formControlName="citasDisponiblesPorHorario"
+                                    name="citasDisponiblesPorHorario">
+                            </mat-form-field>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </ng-container>
+    
+    
+                
+            </form>
+
+        </div>
+    </mat-card-content>
+</mat-card> 

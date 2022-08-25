@@ -50,7 +50,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
   <thead>
     <tr>
       <th>v1</th>
-      <th>v2</th>
+      <th>v1.2</th>
+      <th>v1.3</th>
     </tr>
   </thead>
   <tbody>
@@ -60,6 +61,9 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
       </td>
       <td>
           <img src="./barber2.PNG" alt="Barber" style="max-width:50px;">
+      </td>
+      <td>
+          <img src="./barber3.PNG" alt="Barber" style="max-width:50px;">
       </td>
     </tr>
   </tbody>

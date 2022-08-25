@@ -47,6 +47,11 @@ export class FullComponent {
       menu: "Servicios",
     },
     {
+      link: "/schedule",
+      icon: "clock",
+      menu: "Horario",
+    },
+    {
       link: "/button",
       icon: "disc",
       menu: "Buttons",
