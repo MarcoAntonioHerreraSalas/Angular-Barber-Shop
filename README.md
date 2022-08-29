@@ -27,6 +27,7 @@ Asi mismo el sistema trabaja con una version de Flexy Admin para facilitar el tr
 <li>Flexy Admin </li>
 <li>Angular Guard para Inicio de Sesión</li>
 <li>Modulo de Servicios con CRUD</li>
+<li>Modulo de Agendar Citas</li>
 </ul>
 
 
@@ -52,6 +53,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
       <th>v1</th>
       <th>v1.2</th>
       <th>v1.3</th>
+      <th>v1.4</th>
     </tr>
   </thead>
   <tbody>
@@ -62,8 +64,13 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
       <td>
           <img src="./barber2.PNG" alt="Barber" style="max-width:50px;">
       </td>
+    </tr>
+    <tr>
       <td>
           <img src="./barber3.PNG" alt="Barber" style="max-width:50px;">
+      </td>
+      <td>
+          <img src="./barber4.PNG" alt="Barber" style="max-width:50px;">
       </td>
     </tr>
   </tbody>

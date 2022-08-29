@@ -44,6 +44,10 @@ const routes: Routes = [
         path:"schedule",
         loadChildren: () => import('./components/schedule/schedule.module').then((m) => m.ScheduleModule)
       },
+      {
+        path:"appointments",
+        loadChildren: () => import('./components/appointment/appointment.module').then((m) => m.AppointmentModule)
+      },
       {path:"alerts", component:AlertsComponent},
       {path:"forms", component:FormsComponent},
       {path:"table", component:ProductComponent},

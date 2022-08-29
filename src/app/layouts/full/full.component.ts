@@ -42,6 +42,11 @@ export class FullComponent {
       menu: "Dashboard",
     },
     {
+      link: "/appointments",
+      icon: "calendar",
+      menu: "Citas",
+    },
+    {
       link: "/services",
       icon: "briefcase",
       menu: "Servicios",
