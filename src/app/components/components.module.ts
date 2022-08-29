@@ -43,7 +43,8 @@ import { TooltipsComponent } from './tooltips/tooltips.component'
     CommonModule,
     FeatherModule.pick(allIcons),
     DemoFlexyModule,
-    FormsModule
+    FormsModule,
+    
   ],
   exports: [
     AlertsComponent,

@@ -45,23 +45,23 @@
       </button>
       <div class="ms-auto">
         <button mat-button class="fs-16 pt-4 pb-4 ps-8 pe-8 text-light-muted" [matMenuTriggerFor]="menu">
-          <img src="assets/images/user2.webp" class="rounded-circle" alt="">
+          <img [src]="user.avatar" height="50px" width="50px" class="rounded-circle" alt="">
           <span class="fw-light ms-8 text-secondary">Hi,</span>
           <span class="fw-bold ms-8">{{user.name}}</span>
           <i-feather name="chevron-down" class="feather-base mt-n2"></i-feather>
         </button>
         <mat-menu #menu="matMenu" class="profile-dropdown">
           <div class="p-16 mb-4">
-            <button mat-menu-item class="fs-16">Edit Profile</button>
+            <!-- <button mat-menu-item class="fs-16">Edit Profile</button>
             <button mat-menu-item class="fs-16">Account</button>
-            <button mat-menu-item class="fs-16">Change Password</button>
-            <button mat-menu-item class="fs-16">My Settings</button>
+            <button mat-menu-item class="fs-16">Change Password</button> -->
+            <!-- <button mat-menu-item class="fs-16">My Settings</button> -->
           </div>
 
           <hr>
 
           <div class="p-16">
-            <button mat-button class="btn btn-info w-100">Logout</button>
+            <button mat-button class="btn btn-info w-100" (click)="logout()">Logout</button>
           </div>
 
         </mat-menu>

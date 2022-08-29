@@ -23,6 +23,8 @@ import { LoginGuard } from './guards/login.guard';
 
 // Interceptors
 import {LoginInterceptorService} from './interceptors/login-interceptor.service';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import {LoginInterceptorService} from './interceptors/login-interceptor.service'
     MatCardModule,
     FormsModule,
     ReactiveFormsModule,
+    MatFormFieldModule,MatInputModule,
   ],
   providers: [
     LocalStorageService,

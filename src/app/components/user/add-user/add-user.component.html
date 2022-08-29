@@ -1,0 +1,50 @@
+<h4 class="mb-32">Agregar usuario</h4>
+
+    <div  *ngIf="errorAddUser != '' "
+      class="alert alert-danger alert-text-danger d-flex fs-14 align-items-center rounded mb-16"
+      role="alert">
+      <i-feather name="alert-circle" class="text-danger feather-base me-12"></i-feather>
+      {{ errorAddUser }}
+    </div>
+
+    <form [formGroup]="addUserForm" (submit)="addUser()">
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text"  placeholder="Nombre del usuario" formControlName="name" name="name">
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Correo</mat-label>
+        <input matInput type="text" placeholder="Correo Electronico" formControlName="email" name="email">
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="text" placeholder="Contraseña" formControlName="password" name="password">
+      </mat-form-field>
+    
+
+      <mat-form-field class="w-100 fs-16" appearance="outline" >
+        <mat-label>Avatar</mat-label>
+        <img src="" height="100px" width="100px" #imgAvatar>
+        <i-feather  (click)="refreshAvatar()" name="refresh-ccw" class=" feather-base me-12 refreshIcon"></i-feather>
+        <input matInput type="text" placeholder=" Avatar" formControlName="avatar" name="avatar" style="display: none;">
+      </mat-form-field>
+      
+      <mat-form-field appearance="outline">
+        <mat-label>Rol</mat-label>
+        <mat-select formControlName="role" name="role" ngDefaultControl >
+          <mat-option  value="">Seleccionar Rol</mat-option>
+          <mat-option *ngFor="let role of roles" [value]="role">{{role}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Permisos</mat-label>
+        <mat-select formControlName="permissions" name="permissions" ngDefaultControl  multiple>
+          <mat-option *ngFor="let permiso of permisos" [value]="permiso">{{permiso}}</mat-option>
+        </mat-select>
+      </mat-form-field><br>
+
+      <button mat-button class="btn btn-info fw-normal"  type="submit">Submit</button>
+    </form>

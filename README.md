@@ -64,8 +64,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
       <td>
           <img src="./barber2.PNG" alt="Barber" style="max-width:50px;">
       </td>
-    </tr>
-    <tr>
       <td>
           <img src="./barber3.PNG" alt="Barber" style="max-width:50px;">
       </td>

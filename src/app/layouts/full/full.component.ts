@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import {LoginService} from '../../components/login/login.service';
 import { User } from 'src/app/interfaces/login.interface';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
+import {Router} from '@angular/router';
 
 interface sidebarMenu {
   link: string;
@@ -27,7 +29,8 @@ export class FullComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver, private loginService: LoginService) { 
+  constructor(private breakpointObserver: BreakpointObserver, private loginService: LoginService,
+    private local: LocalStorageService, private router: Router) { 
     const u =  this.loginService.getUser();
     this.user = u;
 
@@ -55,6 +58,11 @@ export class FullComponent {
       link: "/schedule",
       icon: "clock",
       menu: "Horario",
+    },
+    {
+      link: "/users",
+      icon: "users",
+      menu: "Usuarios",
     },
     {
       link: "/button",
@@ -137,5 +145,11 @@ export class FullComponent {
       menu: "Slide Toggle",
     },
   ]
+
+  logout(){
+    this.local.remove('token');
+    this.local.remove('user');
+    this.router.navigate(['login']);
+  }
 
 }

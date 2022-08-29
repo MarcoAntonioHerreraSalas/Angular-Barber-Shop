@@ -48,6 +48,10 @@ const routes: Routes = [
         path:"appointments",
         loadChildren: () => import('./components/appointment/appointment.module').then((m) => m.AppointmentModule)
       },
+      {
+        path:"users",
+        loadChildren: () => import('./components/user/user.module').then((m) => m.UserModule)
+      },
       {path:"alerts", component:AlertsComponent},
       {path:"forms", component:FormsComponent},
       {path:"table", component:ProductComponent},

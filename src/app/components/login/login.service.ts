@@ -31,6 +31,7 @@ export class LoginService {
     return this.http.post(this.defaultBack + 'auth/ingresar',data,{headers: this.headers});
   }
 
+
   setTokenService(token: string){
     this.token = token;
   }
