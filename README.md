@@ -28,6 +28,8 @@ Asi mismo el sistema trabaja con una version de Flexy Admin para facilitar el tr
 <li>Angular Guard para Inicio de Sesión</li>
 <li>Modulo de Servicios con CRUD</li>
 <li>Modulo de Agendar Citas</li>
+<li>CRUD Usuarios</li>
+<li>CRUD Productos</li>
 </ul>
 
 
