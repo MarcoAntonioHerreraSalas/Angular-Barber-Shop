@@ -6,7 +6,7 @@
 </h1>
 
 <!-- Main image of Template -->
-  <img src="./barber.PNG" />
+  <img src="./version-pictures/barber.PNG" />
 
 
 Sistema Barber Shop desarrollado en Angular 13.1.3 con el fin de controlar un negocio de barberia desde 
