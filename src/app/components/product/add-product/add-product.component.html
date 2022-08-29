@@ -1,0 +1,38 @@
+<h4 class="mb-32">Agregar Producto</h4>
+
+    <div  *ngIf="errorAddProduct != '' "
+      class="alert alert-danger alert-text-danger d-flex fs-14 align-items-center rounded mb-16"
+      role="alert">
+      <i-feather name="alert-circle" class="text-danger feather-base me-12"></i-feather>
+      {{ errorAddProduct }}
+    </div>
+
+    <form [formGroup]="addProductForm" (submit)="addProduct()">
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text"  placeholder="Nombre del Producto" formControlName="nombre" name="nombre">
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Costo</mat-label>
+        <input matInput type="number" placeholder="Costo" formControlName="costo" name="costo">
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Precio</mat-label>
+        <input matInput type="number" placeholder="Precio" formControlName="precio" name="precio">
+      </mat-form-field>
+    
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Stock</mat-label>
+        <input matInput type="number" placeholder="Stock" formControlName="stock" name="stock">
+      </mat-form-field>
+    
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Descripción del Producto</mat-label>
+        <textarea matInput rows="6" placeholder="Descripción" formControlName="descripcion" name="descripcion"></textarea>
+      </mat-form-field>
+
+
+      <button mat-button class="btn btn-info fw-normal"  type="submit">Submit</button>
+    </form>

@@ -54,21 +54,29 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
       <th>v1.2</th>
       <th>v1.3</th>
       <th>v1.4</th>
+      <th>v1.5</th>
+      <th>v1.6</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-          <img src="./barber.PNG" alt="Barber" style="max-width:50px;">
+          <img src="./version-pictures/barber.PNG" alt="Barber" style="max-width:50px;">
       </td>
       <td>
-          <img src="./barber2.PNG" alt="Barber" style="max-width:50px;">
+          <img src="./version-pictures/barber2.PNG" alt="Barber" style="max-width:50px;">
       </td>
       <td>
-          <img src="./barber3.PNG" alt="Barber" style="max-width:50px;">
+          <img src="./version-pictures/barber3.PNG" alt="Barber" style="max-width:50px;">
       </td>
       <td>
-          <img src="./barber4.PNG" alt="Barber" style="max-width:50px;">
+          <img src="./version-pictures/barber4.PNG" alt="Barber" style="max-width:50px;">
+      </td>
+      <td>
+          <img src="./version-pictures/barber5.PNG" alt="Barber" style="max-width:50px;">
+      </td>
+      <td>
+          <img src="./version-pictures/barber6.PNG" alt="Barber" style="max-width:50px;">
       </td>
     </tr>
   </tbody>

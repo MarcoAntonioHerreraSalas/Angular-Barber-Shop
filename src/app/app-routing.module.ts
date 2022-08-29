@@ -52,6 +52,14 @@ const routes: Routes = [
         path:"users",
         loadChildren: () => import('./components/user/user.module').then((m) => m.UserModule)
       },
+      {
+        path:"sales",
+        loadChildren: () => import('./components/sale/sale.module').then((m) => m.SaleModule)
+      },
+      {
+        path:"products",
+        loadChildren: () => import('./components/product/product.module').then((m) => m.ProductModule)
+      },
       {path:"alerts", component:AlertsComponent},
       {path:"forms", component:FormsComponent},
       {path:"table", component:ProductComponent},
