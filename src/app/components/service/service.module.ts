@@ -15,6 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FeatherModule } from 'angular-feather';
 import { allIcons } from 'angular-feather/icons';
+import { SelectServiceComponent } from './select-service/select-service.component';
 
 const routes: Routes = [
   {
@@ -29,7 +30,13 @@ const routes: Routes = [
     path: 'edit-service',
     component: EditServiceComponent
   
+  },
+  {
+    path: 'select-service',
+    component: SelectServiceComponent
+  
   }
+
 ]
 
 
@@ -37,7 +44,8 @@ const routes: Routes = [
   declarations: [
     ServicesComponent,
     AddServiceComponent,
-    EditServiceComponent
+    EditServiceComponent,
+    SelectServiceComponent
   ],
   imports: [
     CommonModule,

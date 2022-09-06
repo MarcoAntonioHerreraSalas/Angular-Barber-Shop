@@ -1,0 +1,103 @@
+
+
+<!-- Daily Activity -->
+<mat-card class="w-100">
+    <mat-card-content>
+        <h4 class="mb-56" *ngIf="idSale == ''">Agregar Venta</h4>
+        <h4 class="mb-56" *ngIf="idSale != ''">Editar Venta</h4>
+
+        <div class="row" >
+            
+            <div class="col-lg-10 col-md-10 col-sm-12">
+                <h5 class="mb-56">Productos / Servicios</h5>
+                <div class="row">
+
+                    <ul style="display: inline-flex;justify-content: flex-end;" >
+                        <li  ><button mat-button color="primary" (click)="openSelectProductModal()" >Agregar Producto</button></li>
+                        <li ><button mat-button color="primary"  (click)="openSelectServiceModal()">Agregar Servicio</button></li>
+                        <li > <button mat-button color="primary"  (click)="openSelectAppointmentModal()" >Seleccionar de Cita</button></li>
+                    </ul>
+                </div>
+                <div class="table-responsive ">
+                    <table mat-table [dataSource]="DataSource" class="text-nowrap w-100">
+
+                    <ng-container matColumnDef="actions">
+                        <th mat-header-cell *matHeaderCellDef> </th>
+                        <td mat-cell class="fw-medium" *matCellDef="let element"> 
+                                <i-feather (click)="removeElementSale(element.id)" name="minus-circle" 
+                                class="warning feather-base me-12 remove-element-sale"></i-feather>
+                        </td>
+                    </ng-container>
+            
+                    <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef> </th>
+                        <td mat-cell class="fw-medium op-5" *matCellDef="let element; let i = index"></td>
+                    </ng-container>
+            
+                    <ng-container matColumnDef="nombre">
+                        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+                        <td mat-cell *matCellDef="let element">
+                        <p class="mb-0 fw-medium ">{{ element.nombre }}</p>
+                        </td>
+                    </ng-container>
+                    
+                    <ng-container matColumnDef="detalle">
+                        
+                        <th mat-header-cell *matHeaderCellDef> Descripción Producto / Servicio</th>
+                        <td mat-cell *matCellDef="let element">
+                        <p class="mb-0 fw-medium op-5">{{element.detalle}}</p>
+                        </td>
+                    </ng-container>
+            
+                    <ng-container matColumnDef="cantidad">
+                        <th mat-header-cell *matHeaderCellDef> Cantidad </th>
+                        <td mat-cell *matCellDef="let element">
+                        <p class="mb-0 fw-medium op-5">{{element.cantidad }}</p>
+                        </td>
+                    </ng-container> 
+    
+                    <ng-container matColumnDef="precio">
+                        <th mat-header-cell *matHeaderCellDef> Precio </th>
+                        <td mat-cell *matCellDef="let element">
+                        <p class="mb-0 fw-medium op-5">{{element.precio | currency}}</p>
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="total">
+                        <th mat-header-cell *matHeaderCellDef> Total </th>
+                        <td mat-cell *matCellDef="let element">
+                        <p class="mb-0 fw-medium op-5">{{element.total | currency}}</p>
+                        </td>
+                    </ng-container>
+            
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                </div>
+
+                <div class="row p-2" *ngIf="DataSource.length > 0">
+                    <table mat-table [dataSource]="totalTable" class="text-nowrap w-100">
+
+                        <ng-container matColumnDef="total"  class="text-left">
+                            <th mat-header-cell *matHeaderCellDef [attr.colspan]="5" style="text-align: center;">Total </th>
+                        </ng-container>
+                        <ng-container matColumnDef="result">
+                            <th mat-header-cell *matHeaderCellDef [attr.colspan]="1" style="text-align: right;" class="p-3">{{getTotal() | currency}} </th>
+                        </ng-container>
+                        <tr mat-header-row *matHeaderRowDef="columns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+                    </table>
+                    <!-- <div class="col-lg-10 col-md-10 col-sm-10">Total General</div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 text-nowrap ">{{getTotal() | currency}}</div> -->
+                </div>
+                
+            </div>
+            <!-- <div class="col-lg-2 col-md-2 col-sm-12">
+                
+            </div> -->
+        </div>
+        <div class="row">
+            <div class="col-lg-10 col-md-10 col-sm-12 p-3 "><button class="btn btn-success float-end " (click)="saveSale()">Guardar</button></div>
+        </div>
+    </mat-card-content>
+</mat-card>

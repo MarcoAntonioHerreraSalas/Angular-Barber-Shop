@@ -30,6 +30,7 @@ Asi mismo el sistema trabaja con una version de Flexy Admin para facilitar el tr
 <li>Modulo de Agendar Citas</li>
 <li>CRUD Usuarios</li>
 <li>CRUD Productos</li>
+<li>Módulo de Ventas</li>
 </ul>
 
 
@@ -59,6 +60,9 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
       <th>v1.5</th>
       <th>v1.6</th>
     </tr>
+    <tr>
+      <th>v2</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
@@ -80,6 +84,12 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
       <td>
           <img src="./version-pictures/barber6.PNG" alt="Barber" style="max-width:50px;">
       </td>
+    </tr>
+    <tr>
+      <td>
+          <img src="./version-pictures/barber7.PNG" alt="Barber" style="max-width:50px;">
+      </td>
+
     </tr>
   </tbody>
 </table>

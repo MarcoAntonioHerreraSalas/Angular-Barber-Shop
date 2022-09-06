@@ -18,6 +18,7 @@ import { allIcons } from 'angular-feather/icons';
 import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatListModule } from '@angular/material/list';
+import { SelectProductComponent } from './select-product/select-product.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,11 @@ const routes: Routes = [
     path: 'edit-product',
     component: EditProductComponent
   
+  },
+  {
+    path: 'select-product',
+    component: SelectProductComponent
+  
   }
 ]
 
@@ -40,7 +46,8 @@ const routes: Routes = [
   declarations: [
     ProductsComponent,
     AddProductComponent,
-    EditProductComponent
+    EditProductComponent,
+    SelectProductComponent
   ],
   imports: [
     CommonModule,
