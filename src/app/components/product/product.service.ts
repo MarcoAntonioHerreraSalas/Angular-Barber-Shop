@@ -11,7 +11,7 @@ import { Service } from 'src/app/interfaces/service.interface';
 
 export class ProductService {
 
-  defaultBack = 'https://backend-node-js-angular-barber-shop.vercel.app/api/product/';
+  defaultBack = 'http://localhost:3001/api/product/';
   headers = { 
     'Content-Type': 'application/json'
   }

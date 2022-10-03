@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AppointmentService {
-  defaultBack = 'https://backend-node-js-angular-barber-shop.vercel.app/api/appointment/';
+  defaultBack = 'http://localhost:3001/api/appointment/';
   headers = { 
     'Content-Type': 'application/json'
   }

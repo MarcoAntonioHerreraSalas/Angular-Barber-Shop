@@ -16,7 +16,7 @@ export class LoginService {
     const tok = localStorage.getItem("token");
     this.token = tok?tok:"";
   }
-  defaultBack = 'https://backend-node-js-angular-barber-shop.vercel.app/api/';
+  defaultBack = 'http://localhost:3001/api/';
   headers = { 
     'Content-Type': 'application/json'
   }
