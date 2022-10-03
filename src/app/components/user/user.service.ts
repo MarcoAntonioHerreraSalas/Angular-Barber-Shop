@@ -11,8 +11,8 @@ import { Service } from 'src/app/interfaces/service.interface';
 
 export class UserService {
 
-  defaultBack = 'http://localhost:3001/api/user/';
-  defaultServerBack= 'http://localhost:3001/api/';
+  defaultBack = 'http://marcosalasdeploys.alwaysdata.net/api/user/';
+  defaultServerBack= 'http://marcosalasdeploys.alwaysdata.net/api/';
   headers = { 
     'Content-Type': 'application/json'
   }

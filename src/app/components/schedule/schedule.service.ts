@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ScheduleService {
 
-  defaultBack = 'http://localhost:3001/api/schedule/';
+  defaultBack = 'http://marcosalasdeploys.alwaysdata.net/api/schedule/';
   headers = { 
     'Content-Type': 'application/json'
   }

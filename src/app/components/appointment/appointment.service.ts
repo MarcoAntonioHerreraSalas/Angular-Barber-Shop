@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AppointmentService {
-  defaultBack = 'http://localhost:3001/api/appointment/';
+  defaultBack = 'http://marcosalasdeploys.alwaysdata.net/api/appointment/';
   headers = { 
     'Content-Type': 'application/json'
   }

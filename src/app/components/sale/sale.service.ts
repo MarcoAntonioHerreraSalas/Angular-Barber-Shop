@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class SaleService {
 
-  defaultBack = 'http://localhost:3001/api/sale/';
+  defaultBack = 'http://marcosalasdeploys.alwaysdata.net/api/sale/';
   headers = { 
     'Content-Type': 'application/json'
   }

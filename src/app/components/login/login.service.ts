@@ -16,7 +16,7 @@ export class LoginService {
     const tok = localStorage.getItem("token");
     this.token = tok?tok:"";
   }
-  defaultBack = 'http://localhost:3001/api/';
+  defaultBack = 'http://marcosalasdeploys.alwaysdata.net/api/';
   headers = { 
     'Content-Type': 'application/json'
   }
