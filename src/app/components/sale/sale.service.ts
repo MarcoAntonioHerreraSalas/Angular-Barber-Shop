@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class SaleService {
 
-  defaultBack = 'http://marcosalasdeploys.alwaysdata.net/api/sale/';
+  defaultBack = 'https://backend-node-js-angular-barber-shop.vercel.app/api/sale/';
   headers = { 
     'Content-Type': 'application/json'
   }

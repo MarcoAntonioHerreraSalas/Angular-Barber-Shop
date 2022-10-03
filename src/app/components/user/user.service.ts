@@ -11,8 +11,8 @@ import { Service } from 'src/app/interfaces/service.interface';
 
 export class UserService {
 
-  defaultBack = 'http://marcosalasdeploys.alwaysdata.net/api/user/';
-  defaultServerBack= 'http://marcosalasdeploys.alwaysdata.net/api/';
+  defaultBack = 'https://backend-node-js-angular-barber-shop.vercel.app/api/user/';
+  defaultServerBack= 'https://backend-node-js-angular-barber-shop.vercel.app/api/';
   headers = { 
     'Content-Type': 'application/json'
   }

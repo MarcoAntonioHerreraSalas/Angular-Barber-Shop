@@ -16,7 +16,7 @@ export class LoginService {
     const tok = localStorage.getItem("token");
     this.token = tok?tok:"";
   }
-  defaultBack = 'http://marcosalasdeploys.alwaysdata.net/api/';
+  defaultBack = 'https://backend-node-js-angular-barber-shop.vercel.app/api/';
   headers = { 
     'Content-Type': 'application/json'
   }

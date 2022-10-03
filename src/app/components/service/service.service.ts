@@ -10,7 +10,7 @@ import { Service } from 'src/app/interfaces/service.interface';
 
 export class ServiceService {
 
-  defaultBack = 'http://marcosalasdeploys.alwaysdata.net/api/service/';
+  defaultBack = 'https://backend-node-js-angular-barber-shop.vercel.app/api/service/';
   headers = { 
     'Content-Type': 'application/json'
   }
