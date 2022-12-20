@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import {UserService} from '../user.service';
 import Swal from 'sweetalert2'
+import { Permission } from 'src/app/interfaces/user.interface';
 
 
 @Component({
@@ -15,8 +16,8 @@ export class AddUserComponent implements OnInit {
   addUserForm!: FormGroup;
   public errorAddUser = "";
    roles: string[] = [];
-   permisos: string[] = [];
-  @Output() closeAddUserModal = new EventEmitter();
+   permisos: Permission[] = [];
+   @Output() closeAddUserModal = new EventEmitter();
   @ViewChild('imgAvatar') imgAvatar! : ElementRef<HTMLImageElement>;
   randomAvatar = Math.random();
   urlAvatar = "https://avatars.dicebear.com/api/adventurer/"+this.randomAvatar+".svg";

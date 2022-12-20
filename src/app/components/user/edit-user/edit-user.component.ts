@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Service } from 'src/app/interfaces/service.interface';
 import Swal from 'sweetalert2';
 import { UserService } from '../user.service';
+import { Permission } from 'src/app/interfaces/user.interface';
 
 @Component({
   selector: 'app-edit-user',
@@ -15,7 +16,7 @@ export class EditUserComponent implements OnInit {
   public errorEditUser = "";
   randomAvatar = Math.random();
   roles: string[] = [];
-  permisos: string[] = [];
+  permisos: Permission[] = [];
   @ViewChild('imgAvatar') imgAvatar! : ElementRef<HTMLImageElement>;
   urlAvatar = "https://avatars.dicebear.com/api/adventurer/"+this.randomAvatar+".svg";
 

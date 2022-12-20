@@ -3,6 +3,7 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import Swal from 'sweetalert2';
 import {AddUserComponent} from '../add-user/add-user.component'
 import {EditUserComponent} from '../edit-user/edit-user.component'
+import { UserInterface } from 'src/app/interfaces/user.interface';
 
 import { UserService } from '../user.service';
 
@@ -15,6 +16,8 @@ export interface Services {
   _v: number;
 }
 
+
+
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
@@ -22,8 +25,7 @@ export interface Services {
 })
 export class UsersComponent implements OnInit {
   displayedColumns: string[] = ['id', 'avatar','name' ,'role','permissions','actions'];
-  dataSource: Services[] = [];
-  
+  dataSource: UserInterface[] = [];
 
   constructor(private dialog: MatDialog , private  userService: UserService) { }
 
@@ -34,6 +36,15 @@ export class UsersComponent implements OnInit {
   getUsers(){
     this.userService.getUsers().subscribe((x: any) => {
       this.dataSource = x;
+      this.dataSource.map((e) => {
+        e.permissions =  e.permissions.map((p) => {
+          var perm = this.userService.permisos.find((f) => f.value == p);
+          p =  perm?perm.text:'';
+          return p
+        })
+
+
+      })
     })
   }
 

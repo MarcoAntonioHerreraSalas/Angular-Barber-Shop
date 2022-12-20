@@ -36,6 +36,13 @@ export class FullComponent {
 
   }
 
+  ngOnInit(): void {
+
+    const res  = this.sidebarMenu.filter((x) => this.user.permissions.includes( x.link.replace("/","")))
+    this.sidebarMenu = res;
+  }
+
+
   routerActive: string = "activelink";
 
   sidebarMenu: sidebarMenu[] = [

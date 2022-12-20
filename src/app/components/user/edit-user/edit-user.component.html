@@ -42,7 +42,7 @@
       <mat-form-field appearance="outline">
         <mat-label>Permisos</mat-label>
         <mat-select formControlName="permissions" name="permissions" ngDefaultControl  multiple>
-          <mat-option *ngFor="let permiso of permisos" [value]="permiso">{{permiso}}</mat-option>
+          <mat-option *ngFor="let permiso of permisos" [value]="permiso.value">{{permiso.text}}</mat-option>
         </mat-select>
       </mat-form-field><br>
 

@@ -18,7 +18,14 @@ export class UserService {
   }
 
   public roles = ['Administrador','Ventas','Barber'];
-  public permisos = ['Citas','Servicios','Horario','Usuarios','Productos','Ventas'];
+  public permisos = [
+    {text: 'Dashboard', value:'home'},
+    {text: 'Citas', value:'appointments'},
+    {text: 'Servicios', value:'services'},
+    {text: 'Horario', value:'schedule'},
+    {text: 'Usuarios', value:'users'},
+    {text: 'Ventas', value:'sales'},
+    {text: 'Productos', value:'products'}];
 
   constructor(private http: HttpClient) { }
 

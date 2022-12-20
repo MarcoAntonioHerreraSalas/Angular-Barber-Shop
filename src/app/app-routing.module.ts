@@ -22,6 +22,7 @@ import { FullComponent } from './layouts/full/full.component';
 //guards
 
 import {LoginGuard} from './guards/login.guard';
+import { RoleGuard } from './guards/role.guard';
 
 const routes: Routes = [
  
@@ -38,27 +39,33 @@ const routes: Routes = [
       {path:"home", component:DashboardComponent},
       {
         path:"services",
-        loadChildren: () => import('./components/service/service.module').then((m) => m.ServiceModule)
+        loadChildren: () => import('./components/service/service.module').then((m) => m.ServiceModule),
+        canActivate: [RoleGuard]
       },
       {
         path:"schedule",
-        loadChildren: () => import('./components/schedule/schedule.module').then((m) => m.ScheduleModule)
+        loadChildren: () => import('./components/schedule/schedule.module').then((m) => m.ScheduleModule),
+        canActivate: [RoleGuard]
       },
       {
         path:"appointments",
-        loadChildren: () => import('./components/appointment/appointment.module').then((m) => m.AppointmentModule)
+        loadChildren: () => import('./components/appointment/appointment.module').then((m) => m.AppointmentModule),
+        canActivate: [RoleGuard]
       },
       {
         path:"users",
-        loadChildren: () => import('./components/user/user.module').then((m) => m.UserModule)
+        loadChildren: () => import('./components/user/user.module').then((m) => m.UserModule),
+        canActivate: [RoleGuard]
       },
       {
         path:"sales",
-        loadChildren: () => import('./components/sale/sale.module').then((m) => m.SaleModule)
+        loadChildren: () => import('./components/sale/sale.module').then((m) => m.SaleModule),
+        canActivate: [RoleGuard]
       },
       {
         path:"products",
-        loadChildren: () => import('./components/product/product.module').then((m) => m.ProductModule)
+        loadChildren: () => import('./components/product/product.module').then((m) => m.ProductModule),
+        canActivate: [RoleGuard]
       },
       {path:"alerts", component:AlertsComponent},
       {path:"forms", component:FormsComponent},
